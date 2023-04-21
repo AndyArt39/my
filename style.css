@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.count-display {
+  font-size: 32px;
+  color: blueviolet;
+}
+
+.btn {
+  padding: 12px 37px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 149, 255);
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  transition: border-color .3s ease-in-out;
+}
+
+.btn:hover {
+  border: 2px solid rgb(0, 149, 255);
+}
+
+.btn:active {
+  border: none;
+}

@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 40px 15px;
+	margin: 0 auto;
+}
+
+.title {
+  color: rgb(16, 66, 173);
+  font-size: 64px;
+}
+
+.input {
+  border: 2px solid rgb(16, 66, 173);
+  border-radius: 5px;
+}
+
+.input-error.input {
+  border-color: red;
+}
+
+.list-error {
+  color: darkred;
+}
+
+.input-filter {
+  border: 2px solid rgb(16, 66, 173);
+  border-radius: 5px;
+}
