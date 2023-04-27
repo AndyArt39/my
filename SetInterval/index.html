@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: yellowgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="block"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script>
+
+    // let block = document.querySelector('.block');
+    // let start = Date.now(); // запомнить время начала
+
+    // let timer = setInterval(function() {
+    // // сколько времени прошло с начала анимации?
+    // let timePassed = Date.now() - start;
+
+    // if (timePassed >= 2000) {
+    // 	clearInterval(timer); // закончить анимацию через 2 секунды
+    // 	return;
+    // }
+
+    // // отрисовать анимацию на момент timePassed, прошедший с начала анимации
+    // draw(timePassed);
+
+    // }, 16); // при 16 мс fps = 60
+
+    // // в то время как timePassed идёт от 0 до 2000
+    // // left изменяет значение от 0px до 400px
+    // function draw(timePassed) {
+    // 	block.style.transform = `translateX(${timePassed / 5}px)`;
+    // }
+
+    setTimeout(() => {
+      // ex 1
+      // gsap.to(".block", { duration: 3, x: 1000, y: 500 });
+
+      // ex 2
+      //gsap.to(".block", {duration: 1, x: 100, rotation: 360, scale: 0.5});
+
+      // ex 3
+      gsap.from(".block", {
+      	opacity: 0,
+      	y: 100,
+      	duration: 3
+      });
+
+      // ex 4
+      //gsap.fromTo(".block", {opacity: 0}, {opacity: 0.5, duration: 1});
+    }, 500)
+
+
+
+  </script>
+</body>
+
+</html>

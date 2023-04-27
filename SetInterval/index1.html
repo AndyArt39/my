@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link href='//fonts.googleapis.com/css?family=Signika+Negative:300,400' rel='stylesheet' type='text/css'> -->
+  <style>
+    body {
+      margin: 10px;
+    }
+
+    .box {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    .box:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    button {
+      text-transform: none;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .grey {
+      background-color: grey;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box green"></div>
+  <div class="box orange"></div>
+  <div class="box grey"></div>
+  <div class="box pink"></div>
+
+  <div class="nav">
+    <button id="play">play()</button>
+    <button id="pause">pause()</button>
+    <button id="resume">resume()</button>
+    <button id="reverse">reverse()</button>
+    <button id="restart">restart()</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+  <script>
+    var play = document.querySelector("#play");
+    var pause = document.querySelector("#pause");
+    var resume = document.querySelector("#resume");
+    var reverse = document.querySelector("#reverse");
+    var restart = document.querySelector("#restart");
+
+    var tl = gsap.timeline({ paused: true });
+
+    tl.to(".green", { duration: 1, x: 200 })
+      .to(".orange", { duration: 1, x: 200, scale: 0.2 }, "greyAndPinkAndOrange")
+      .to(".grey", { duration: 1, x: 200, scale: 2, y: 20 }, "greyAndPinkAndOrange")
+      .to(".pink", { duration: 1, x: 200, rotation: 360 }, "greyAndPinkAndOrange");
+
+    play.onclick = function () {
+      tl.play();
+    }
+
+    pause.onclick = function () {
+      tl.pause();
+    }
+
+    resume.onclick = function () {
+      tl.resume();
+    }
+
+    reverse.onclick = function () {
+      tl.reverse();
+    }
+
+    restart.onclick = function () {
+      tl.restart();
+    }
+  </script>
+</body>
+
+</html>
